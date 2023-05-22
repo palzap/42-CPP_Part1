@@ -6,7 +6,7 @@
 #    By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/02 12:26:28 by pealexan          #+#    #+#              #
-#    Updated: 2023/05/10 14:30:21 by pealexan         ###   ########.fr        #
+#    Updated: 2023/05/17 08:57:33 by pealexan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,8 +37,8 @@ SRCS			= src
 OBJ_DIR		= bin
 
 #_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_ FILES _/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_
-NAME			= megaphone
-_FILES			= megaphone
+NAME			= phoneBook
+_FILES			= main Contact PhoneBook
 OBJS			= $(_FILES:%=%.o)
 TARGET			= $(addprefix $(OBJ_DIR)/, $(OBJS))
 
@@ -50,7 +50,7 @@ $(NAME): $(OBJ_DIR) $(TARGET)
 	echo "$(GREEN)Done$(RESET)"
 
 $(OBJ_DIR)/%.o : %.cpp
-	echo "[$(CYAN)Compiling$(RESET)] $(YELLOW)$(CPPFLAGS)$(YELLOW) $(GREEN)$<$(RESET)"
+	echo "[$(CYAN)Compiling$(RESET)] $(YELLOW)$(CPPFLAGS)$(RESET) $(GREEN)$<$(RESET)"
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(DEPS)
 
 $(OBJ_DIR):
