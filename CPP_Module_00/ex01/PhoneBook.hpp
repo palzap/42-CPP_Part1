@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:24:51 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/22 09:10:44 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/05/23 14:19:34 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,9 @@ class PhoneBook
 	public:
 		void	add();
 		void	search();
-		PhoneBook();
-		void	print();
-		size_t	get_size(void);
+		size_t	get_size(void) const;
 		Contact	contacts[8];
+		PhoneBook();
 
 	private:
 		int		_size;

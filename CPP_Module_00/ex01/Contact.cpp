@@ -6,13 +6,13 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:19:13 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/22 09:11:35 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/05/23 14:21:37 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/book.hpp"
+#include "book.hpp"
 
-void	Contact::print_info()
+void	Contact::print_info() const
 {
 	std::cout << "First Name: " << _first_name << std::endl;
 	std::cout << "Last Name: " << _last_name << std::endl;
@@ -57,35 +57,35 @@ void	Contact::get_info(void)
 	this->_darkest_secret = this->read_input("Darkest Secret");
 }
 
-std::string	Contact::get_first_name(void)
+std::string	Contact::get_first_name(void) const
 {
 	if (this->_first_name.length() > 10)
 		return resize_info(this->_first_name);
 	return this->_first_name;
 }
 
-std::string	Contact::get_last_name(void)
+std::string	Contact::get_last_name(void) const
 {
 	if (this->_last_name.length() > 10)
 		return resize_info(this->_last_name);
 	return this->_last_name;
 }
 
-std::string	Contact::get_nickname(void)
+std::string	Contact::get_nickname(void) const
 {
 	if (this->_nickname.length() > 10)
 		return resize_info(this->_nickname);
 	return this->_nickname;
 }
 
-std::string	Contact::get_phone_number(void)
+std::string	Contact::get_phone_number(void) const
 {
 	if (this->_phone_number.length() > 10)
 		return resize_info(this->_phone_number);
 	return this->_phone_number;
 }
 
-std::string	Contact::get_darkest_secret(void)
+std::string	Contact::get_darkest_secret(void) const
 {
 	if (this->_darkest_secret.length() > 10)
 		return resize_info(this->_darkest_secret);

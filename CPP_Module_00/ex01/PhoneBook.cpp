@@ -6,11 +6,11 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:24:51 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/22 09:11:29 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/05/23 14:19:26 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/book.hpp"
+#include "book.hpp"
 
 PhoneBook::PhoneBook(void)
 {
@@ -40,7 +40,7 @@ void	PhoneBook::search(void)
 	}
 }
 
-size_t	PhoneBook::get_size(void)
+size_t	PhoneBook::get_size(void) const
 {
 	return this->_size;
 }
