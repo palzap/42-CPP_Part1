@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 14:13:00 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/24 15:07:48 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/05/26 15:32:23 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,31 +15,56 @@
 #include <fstream>
 #include <iomanip>
 
-int	main(int ac, char **av)
-{	
+void	error_handling(int ac, char **av)
+{
 	if (ac != 4)
 	{
 		std::cout << "Wrong number of arguments" << std::endl;
-		return (1);
+		exit(1);
 	}
 	
+	std::string findStr = av[2];
+	if (findStr.empty())
+	{
+		std::cout << "Find string can't be empty" << std::endl;
+		exit(1);
+	}
+}
+
+std::string	do_replace(std::string findStr, std::string replaceStr, std::string line)
+{
+	size_t		pos = 0;
+
+	while(1)
+	{
+		pos = line.find(findStr, pos);
+		if (pos == std::string::npos)
+			break;
+		line.erase(pos, findStr.length());
+		line.insert(pos, replaceStr);
+		pos += replaceStr.length();
+	}
+	return line;
+}
+
+int	main(int ac, char **av)
+{	
+	error_handling(ac, av);
 	std::string	newfile = av[1];
-	std::string	line;
 	std::string findStr = av[2];
 	std::string replaceStr = av[3];
-	size_t		pos;
-	newfile.append(".replace");
+	std::string	line;
 	
+	newfile.append(".replace");
 	std::ifstream	file(av[1]);
 	std::ofstream 	replacefile(newfile.c_str());	
 	if (file.is_open() && replacefile.is_open())
 	{
+		if (findStr == replaceStr)
+			replacefile << file.rdbuf();
 		while (std::getline(file, line))
 		{
-			pos = line.find(findStr);
-			std::string	sub1 = line.substr(0, pos);
-			std::string	sub2 = line.substr(pos + findStr.length());
-			line = sub1 + replaceStr + sub2;
+			line = do_replace(findStr, replaceStr, line);
 			replacefile << line << std::endl;
 		}
 		file.close();

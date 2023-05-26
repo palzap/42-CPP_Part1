@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 08:55:24 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/24 11:24:54 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/05/26 15:43:04 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 void	randomChump(std::string name)
 {
-	Zombie	chump;
+	Zombie	chump(name);
 	
-	chump.giveName(name);
 	chump.announce();
 }

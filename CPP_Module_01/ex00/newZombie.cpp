@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 09:00:12 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/24 11:25:33 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/05/26 15:43:44 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 Zombie*	newZombie(std::string name)
 {
-	Zombie*	newZombie = new Zombie;
+	Zombie*	newZombie = new Zombie(name);
 	
-	newZombie->giveName(name);
 	return (newZombie);
 }

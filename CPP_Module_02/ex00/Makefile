@@ -6,7 +6,7 @@
 #    By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/02 12:26:28 by pealexan          #+#    #+#              #
-#    Updated: 2023/05/26 14:19:13 by pealexan         ###   ########.fr        #
+#    Updated: 2023/05/26 10:32:18 by pealexan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,11 +34,11 @@ MK		= --no-print-directory
 DEPS			= include
 SRCS			= src
 #VPATH			= $(SRCS) $(addprefix $(SRCS)/, $(_SUBFOLDERS))
-OBJ_DIR			= bin
+OBJ_DIR		= bin
 
 #_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_ FILES _/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_
-NAME			= Sed_is_for_losers
-_FILES			= main
+NAME			= Fixed
+_FILES			= main Fixed
 OBJS			= $(_FILES:%=%.o)
 TARGET			= $(addprefix $(OBJ_DIR)/, $(OBJS))
 

@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 08:33:17 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/24 11:23:26 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/05/26 15:42:37 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Zombie
 		std::string	_name;
 
 	public:
-		Zombie();
+		Zombie(std::string name);
 		~Zombie();
 		void	giveName(std::string name);
 		void	announce(void) const;

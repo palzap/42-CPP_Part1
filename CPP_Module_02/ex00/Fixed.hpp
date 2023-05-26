@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/24 08:32:55 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/26 15:43:56 by pealexan         ###   ########.fr       */
+/*   Created: 2023/05/26 10:05:28 by pealexan          #+#    #+#             */
+/*   Updated: 2023/05/26 10:15:53 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef FIXED_HPP
+# define FIXED_HPP
 
-Zombie::Zombie(std::string name) : _name(name)
-{
-}
+# include <iostream>
 
-Zombie::~Zombie()
+class Fixed
 {
-	std::cout << this->_name << " died!" << std::endl;
-}
+	public:
+		Fixed();
+		Fixed(Fixed& copy);
+		Fixed& operator=(Fixed& copy);
+		~Fixed();
+		int		getRawBits(void);
+		void	setRawBits(int const raw);
 
-void	Zombie::announce(void) const
-{
-	std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
+	private:
+		int					_value;
+		static const int	_bits = 8;
+};
+
+#endif

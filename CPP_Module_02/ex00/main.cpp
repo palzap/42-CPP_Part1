@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/24 08:32:55 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/26 15:43:56 by pealexan         ###   ########.fr       */
+/*   Created: 2023/05/26 10:05:06 by pealexan          #+#    #+#             */
+/*   Updated: 2023/05/26 10:29:02 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Fixed.hpp"
 
-Zombie::Zombie(std::string name) : _name(name)
+int main( void )
 {
-}
-
-Zombie::~Zombie()
-{
-	std::cout << this->_name << " died!" << std::endl;
-}
-
-void	Zombie::announce(void) const
-{
-	std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	Fixed a;
+	Fixed b( a );
+	Fixed c;
+	
+	c = b;
+	std::cout << a.getRawBits() << std::endl;
+	std::cout << b.getRawBits() << std::endl;
+	std::cout << c.getRawBits() << std::endl;
+	return 0;
 }
