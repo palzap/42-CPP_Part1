@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 10:16:00 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/26 10:33:22 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/05/27 18:10:50 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ Fixed::~Fixed()
 int		Fixed::getRawBits(void)
 {
 	std::cout << "getRawBits member function called" << std::endl;
-	return 
+	return (this->_value);
 }
 
 void	Fixed::setRawBits(int const raw)
