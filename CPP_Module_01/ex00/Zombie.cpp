@@ -6,11 +6,15 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 08:32:55 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/26 15:43:56 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/05/29 07:56:18 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+
+Zombie::Zombie()
+{
+}
 
 Zombie::Zombie(std::string name) : _name(name)
 {

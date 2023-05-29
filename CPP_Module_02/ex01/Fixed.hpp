@@ -1,35 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/24 08:33:17 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/29 07:56:26 by pealexan         ###   ########.fr       */
+/*   Created: 2023/05/26 10:05:28 by pealexan          #+#    #+#             */
+/*   Updated: 2023/05/29 08:58:54 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef FIXED_HPP
+#define FIXED_HPP
 
 #include <iostream>
-#include <string>
 
-class Zombie
+class Fixed
 {
-	private:
-		std::string	_name;
+public:
+	Fixed();
+	Fixed(Fixed const &copy);
+	Fixed &operator=(Fixed const &copy);
+	Fixed(const int nb);
+	Fixed(const float nb);
+	int getRawBits(void) const;
+	void setRawBits(int const raw);
+	float toFloat(void) const;
+	int toInt(void) const;
+	~Fixed();
 
-	public:
-		Zombie();
-		Zombie(std::string name);
-		~Zombie();
-		void	giveName(std::string name);
-		void	announce(void) const;
+private:
+	int _value;
+	static const int _bits = 8;
 };
 
-void	randomChump(std::string name);
-Zombie*	newZombie(std::string name);
+std::ostream &operator<<(std::ostream &os, const Fixed &fixed);
 
 #endif
