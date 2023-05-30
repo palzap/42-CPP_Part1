@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 08:59:37 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/30 09:56:13 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/05/30 14:29:44 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ Point &Point::operator=(Point const &copy)
 {
 	if (this != &copy)
 	{
-		*this = copy;
+		(Fixed)this->_x = copy._x;
+		(Fixed)this->_y = copy._y;
 	}
 	return (*this);
 }
