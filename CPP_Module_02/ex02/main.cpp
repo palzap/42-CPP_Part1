@@ -6,29 +6,94 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 10:05:06 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/29 09:43:08 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/05/30 08:39:02 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-int main(void)
+void arithmetic_operators(void)
 {
 	Fixed a;
-	Fixed const b(10);
-	Fixed const c(42.42f);
-	Fixed const d(b);
+	const Fixed b(Fixed(5.05f) * Fixed(2));
+	const Fixed c(Fixed(5.05f) + Fixed(2));
+	const Fixed d(Fixed(5.05f) - Fixed(2));
+	const Fixed e(Fixed(5.05f) / Fixed(2));
 
-	a = Fixed(1234.4321f);
+	std::cout << "==========*Arithmetic operators*==========" << std::endl;
 
-	std::cout << "a is " << a << std::endl;
-	std::cout << "b is " << b << std::endl;
-	std::cout << "c is " << c << std::endl;
-	std::cout << "d is " << d << std::endl;
+	std::cout << "b = " << b << std::endl;
+	std::cout << "c = " << c << std::endl;
+	std::cout << "d = " << d << std::endl;
+	std::cout << "e = " << e << std::endl;
+}
 
-	std::cout << "a is " << a.toInt() << " as integer" << std::endl;
-	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
-	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
-	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
-	return 0;
+void compare_operators(void)
+{
+	Fixed a(10);
+	const Fixed b(11);
+
+	std::cout << std::endl
+			  << "==========*Compare operators*==========" << std::endl;
+
+	std::cout << "a = " << a << std::endl;
+	std::cout << "b = " << b << std::endl;
+	if (a > b)
+		std::cout << "a is greater than b" << std::endl;
+	if (a >= b)
+		std::cout << "a is greater or equal to b" << std::endl;
+	if (a < b)
+		std::cout << "a is less than b" << std::endl;
+	if (a <= b)
+		std::cout << "a is less or equal to b" << std::endl;
+	if (a == b)
+		std::cout << "a is equal to b" << std::endl;
+	if (a != b)
+		std::cout << "a is different than b" << std::endl;
+}
+
+void increment_operators(void)
+{
+	Fixed a(10);
+	Fixed b(10);
+
+	std::cout << std::endl
+			  << "==========*Compare operators*==========" << std::endl;
+
+	std::cout << "a = " << a << std::endl;
+	std::cout << "++a = " << ++a << std::endl;
+	std::cout << "a = " << a << std::endl;
+	std::cout << "a++ = " << a++ << std::endl;
+	std::cout << "a = " << a << std::endl;
+
+	std::cout << "b = " << b << std::endl;
+	std::cout << "--b = " << --b << std::endl;
+	std::cout << "b = " << b << std::endl;
+	std::cout << "b-- = " << b-- << std::endl;
+	std::cout << "b = " << b << std::endl;
+}
+
+void min_max_operators(void)
+{
+	Fixed a(10);
+	Fixed b(11);
+	Fixed const c(10);
+	Fixed const d(20);
+
+	std::cout << std::endl
+			  << "==========*Min/Max operators*==========" << std::endl;
+
+	std::cout << Fixed::max(a, b) << std::endl;
+	std::cout << Fixed::min(a, b) << std::endl;
+	std::cout << Fixed::max(c, d) << std::endl;
+	std::cout << Fixed::min(c, d) << std::endl;
+}
+
+int main(void)
+{
+	arithmetic_operators();
+	compare_operators();
+	increment_operators();
+	min_max_operators();
+	return (0);
 }
