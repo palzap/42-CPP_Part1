@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 12:30:26 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/30 15:08:26 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/05/30 15:24:17 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ ClapTrap::ClapTrap() : _name("Default"), _HP(10), _EP(10), _attack(0)
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _HP(10), _EP(10), _attack(0)
 {
-	std::cout << "ClapTrap assembled!" << std::endl;
+	std::cout << "ClapTrap " << name << " assembled!" << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap &copy) : _name(copy._name), _HP(copy._HP), _EP(copy._EP), _attack(copy._attack)
@@ -42,7 +42,7 @@ ClapTrap &ClapTrap::operator=(ClapTrap const &copy)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "ClapTrap out!" << std::endl;
+	std::cout << "ClapTrap " << this->_name << " out!" << std::endl;
 }
 
 void ClapTrap::attack(const std::string &target)
@@ -79,7 +79,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 		std::cout << "ClapTrap " << this->_name << " takes ";
 		std::cout << amount << " points of damage" << std::endl;
 	}
-	if (this->_HP - amount <= 0)
+	if (amount >= this->_HP)
 		this->_HP = 0;
 	else
 		this->_HP -= amount;

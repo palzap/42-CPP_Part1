@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 12:19:14 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/30 13:58:05 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/05/30 15:21:26 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ public:
 
 private:
 	std::string _name;
-	unsigned int _HP;
-	unsigned int _EP;
-	unsigned int _attack;
+	int _HP;
+	int _EP;
+	int _attack;
 };
 
 #endif
