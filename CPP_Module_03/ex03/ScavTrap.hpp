@@ -1,40 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/30 12:19:14 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/31 14:51:59 by pealexan         ###   ########.fr       */
+/*   Created: 2023/05/30 15:51:07 by pealexan          #+#    #+#             */
+/*   Updated: 2023/05/31 14:53:32 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-#define CLAPTRAP_HPP
+#ifndef SCAVTRAP_HPP
+#define SCAVTRAP_HPP
 
-#include <iostream>
+#include "ClapTrap.hpp"
 
-class ClapTrap
+class ScavTrap : public virtual ClapTrap
 {
 public:
-	ClapTrap();
-	ClapTrap(std::string name);
-	ClapTrap(ClapTrap &copy);
-	ClapTrap &operator=(ClapTrap const &copy);
-	~ClapTrap();
+	ScavTrap();
+	ScavTrap(std::string name);
+	using ClapTrap::ClapTrap;
+	using ClapTrap::operator=;
+	~ScavTrap();
 	void attack(const std::string &target);
-	void takeDamage(unsigned int amount);
-	void beRepaired(unsigned int amount);
+	void guardGate();
 
 protected:
-	std::string _name;
-	int _HP;
-	int _EP;
-	int _attack;
-	static int const HP = 10;
-	static int const EP = 10;
-	static int const AP = 0;
+	static int const HP = 100;
+	static int const EP = 50;
+	static int const AP = 20;
 };
 
 #endif

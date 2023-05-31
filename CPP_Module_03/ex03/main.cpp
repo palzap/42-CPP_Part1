@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/30 15:51:07 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/31 14:49:30 by pealexan         ###   ########.fr       */
+/*   Created: 2023/05/30 16:02:33 by pealexan          #+#    #+#             */
+/*   Updated: 2023/05/31 14:58:11 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
-
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
-class ScavTrap : public ClapTrap
+int main(void)
 {
-public:
-	ScavTrap();
-	ScavTrap(std::string name);
-	using ClapTrap::ClapTrap;
-	using ClapTrap::operator=;
-	~ScavTrap();
-	void attack(const std::string &target);
-	void guardGate();
+	DiamondTrap diamond("Coiso");
 
-protected:
-	static int const HP = 100;
-	static int const EP = 50;
-	static int const AP = 20;
-};
-
-#endif
+	diamond.attack("cenas");
+	diamond.whoAmI();
+	std::cout << "HP " << diamond.getHP() << std::endl;
+	std::cout << "EP " << diamond.getEP() << std::endl;
+	std::cout << "Attack " << diamond.getAttack() << std::endl;	
+	return (0);
+}

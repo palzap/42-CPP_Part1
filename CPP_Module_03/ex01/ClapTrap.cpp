@@ -6,18 +6,18 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 12:30:26 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/31 10:23:30 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/05/31 14:48:24 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() : _name("Default"), _HP(10), _EP(10), _attack(0)
+ClapTrap::ClapTrap() : _name("Default"), _HP(HP), _EP(EP), _attack(AP)
 {
 	std::cout << "ClapTrap Default spawned!" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name) : _name(name), _HP(10), _EP(10), _attack(0)
+ClapTrap::ClapTrap(std::string name) : _name(name), _HP(HP), _EP(EP), _attack(AP)
 {
 	std::cout << "ClapTrap " << name << " spawned!" << std::endl;
 }

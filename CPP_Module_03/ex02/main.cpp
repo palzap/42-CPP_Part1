@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/30 15:51:07 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/31 14:49:30 by pealexan         ###   ########.fr       */
+/*   Created: 2023/05/30 16:02:33 by pealexan          #+#    #+#             */
+/*   Updated: 2023/05/31 11:52:31 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
-
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-class ScavTrap : public ClapTrap
+int main(void)
 {
-public:
-	ScavTrap();
-	ScavTrap(std::string name);
-	using ClapTrap::ClapTrap;
-	using ClapTrap::operator=;
-	~ScavTrap();
-	void attack(const std::string &target);
-	void guardGate();
+	FragTrap frag("Coiso");
 
-protected:
-	static int const HP = 100;
-	static int const EP = 50;
-	static int const AP = 20;
-};
-
-#endif
+	frag.attack("cenas");
+	frag.beRepaired(50);
+	frag.takeDamage(50);
+	frag.highFivesGuys();
+	return (0);
+}

@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 12:19:14 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/30 15:21:26 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/05/31 14:49:02 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,9 @@ private:
 	int _HP;
 	int _EP;
 	int _attack;
+	static int const HP = 10;
+	static int const EP = 10;
+	static int const AP = 0;
 };
 
 #endif
