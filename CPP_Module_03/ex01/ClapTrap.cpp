@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 12:30:26 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/30 15:24:17 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/05/31 10:23:30 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 ClapTrap::ClapTrap() : _name("Default"), _HP(10), _EP(10), _attack(0)
 {
-	std::cout << "Constructor called" << std::endl;
+	std::cout << "ClapTrap Default spawned!" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _HP(10), _EP(10), _attack(0)
 {
-	std::cout << "ClapTrap " << name << " assembled!" << std::endl;
+	std::cout << "ClapTrap " << name << " spawned!" << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap &copy) : _name(copy._name), _HP(copy._HP), _EP(copy._EP), _attack(copy._attack)

@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 12:19:14 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/30 15:21:26 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/05/31 10:26:57 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 
-private:
+protected:
 	std::string _name;
 	int _HP;
 	int _EP;
