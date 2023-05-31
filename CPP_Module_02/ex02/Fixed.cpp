@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 10:16:00 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/30 08:39:13 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/05/31 10:18:51 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -190,7 +190,7 @@ Fixed Fixed::operator--(int)
 
 Fixed &Fixed::min(Fixed &f1, Fixed &f2)
 {
-	if (f1._value < f2._value)
+	if (f1.toFloat() < f2.toFloat())
 		return (f1);
 	else
 		return (f2);
@@ -206,7 +206,7 @@ Fixed const &Fixed::min(Fixed const &f1, Fixed const &f2)
 
 Fixed &Fixed::max(Fixed &f1, Fixed &f2)
 {
-	if (f1._value > f2._value)
+	if (f1.toFloat() > f2.toFloat())
 		return (f1);
 	else
 		return (f2);

@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 08:54:51 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/30 11:25:58 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/05/31 10:17:43 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,38 @@
 
 int	main(void)
 {
-	Point const a(0, 0);
-	Point const	b(5, 5);
-	Point const c(0, 10);
-	Point const d(1, 1);
+	{
+		Point const a(0, 0);
+		Point const	b(5, 5);
+		Point const c(0, 10);
+		Point const d(2, 3);
 	
-	if (bsp(a, b, c, d))
-		std::cout << "The point is inside the triangle" << std::endl;
-	else
-		std::cout << "The point is outside the triangle" << std::endl;
+		if (bsp(a, b, c, d))
+			std::cout << "The point is inside the triangle" << std::endl;
+		else
+			std::cout << "The point is outside the triangle" << std::endl;
+	}
+	{
+		Point const a(0, 0);
+		Point const	b(5, 5);
+		Point const c(0, 10);
+		Point const d(0, 2);
+	
+		if (bsp(a, b, c, d))
+			std::cout << "The point is inside the triangle" << std::endl;
+		else
+			std::cout << "The point is outside the triangle" << std::endl;
+	}
+	{
+		Point const a(-1, -1);
+		Point const	b(5, 5);
+		Point const c(0, 10);
+		Point const d(0, 0);
+
+		if (bsp(a, b, c, d))
+			std::cout << "The point is inside the triangle" << std::endl;
+		else
+			std::cout << "The point is outside the triangle" << std::endl;
+	}
 	return (0);
 }
