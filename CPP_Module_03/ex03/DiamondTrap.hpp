@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 11:59:40 by pealexan          #+#    #+#             */
-/*   Updated: 2023/06/01 08:36:55 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/06/01 12:06:51 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,8 @@ class DiamondTrap : public virtual ScavTrap, public virtual FragTrap
 public:
 	DiamondTrap();
 	DiamondTrap(std::string name);
-	using FragTrap::FragTrap;
-	using ScavTrap::ScavTrap;
-	using ClapTrap::operator=;
+	DiamondTrap(DiamondTrap &copy);
+	DiamondTrap &operator=(DiamondTrap const &copy);
 	~DiamondTrap();
 	void whoAmI(void);
 	using FragTrap::_attack;

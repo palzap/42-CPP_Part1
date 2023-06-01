@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 11:44:22 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/31 14:52:34 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/06/01 12:05:17 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ class FragTrap : public ClapTrap
 public:
 	FragTrap();
 	FragTrap(std::string name);
-	using ClapTrap::ClapTrap;
-	using ClapTrap::operator=;
+	FragTrap(FragTrap &copy);
+	FragTrap &operator=(FragTrap const &copy);
 	~FragTrap();
 	void highFivesGuys(void);
 

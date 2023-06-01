@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 12:30:26 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/31 14:48:24 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/06/01 11:54:00 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,12 @@ ClapTrap::~ClapTrap()
 
 void ClapTrap::attack(const std::string &target)
 {
-	if (this->_EP <= 0)
+	if (this->_EP == 0)
 	{
 		std::cout << "ClapTrap " << this->_name << " has no energy to attack" << std::endl;
 		return;
 	}
-	else if (this->_HP <= 0)
+	else if (this->_HP == 0)
 	{
 		std::cout << "ClapTrap " << this->_name << " is dead!" << std::endl;
 		return;
@@ -63,7 +63,7 @@ void ClapTrap::attack(const std::string &target)
 		std::cout << " causing " << this->_attack << " points of damage" << std::endl;
 	}
 	this->_EP -= 1;
-	if (this->_EP <= 0)
+	if (this->_EP == 0)
 		this->_EP = 0;
 }
 
@@ -89,12 +89,12 @@ void ClapTrap::takeDamage(unsigned int amount)
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-	if (this->_EP <= 0)
+	if (this->_EP == 0)
 	{
 		std::cout << "ClapTrap " << this->_name << " has no energy to repair" << std::endl;
 		return;
 	}
-	else if (this->_HP <= 0)
+	else if (this->_HP == 0)
 	{
 		std::cout << "ClapTrap " << this->_name << " is dead!" << std::endl;
 		return;
@@ -105,7 +105,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 		std::cout << amount << " HP" << std::endl;
 	}
 	this->_EP -= 1;
-	if (this->_EP <= 0)
+	if (this->_EP == 0)
 		this->_EP = 0;
 	this->_HP += amount;
 }

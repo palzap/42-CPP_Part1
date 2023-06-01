@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 15:59:43 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/31 14:51:03 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/06/01 12:03:45 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,24 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	_HP = HP;
 	_EP = EP;
 	_attack = AP;
+}
+
+ScavTrap::ScavTrap(ScavTrap &copy) : ClapTrap(copy)
+{
+	std::cout << "ScavTrap Copy constructor called" << std::endl;
+}
+
+ScavTrap &ScavTrap::operator=(ScavTrap const &copy)
+{
+	std::cout << "ScavTrap Copy assignment operator called" << std::endl;
+	if (this != &copy)
+	{
+		this->_attack = copy._attack;
+		this->_HP = copy._HP;
+		this->_EP = copy._EP;
+		this->_name = copy._name;
+	}
+	return (*this);
 }
 
 ScavTrap::~ScavTrap()

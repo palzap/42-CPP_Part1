@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 11:47:06 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/31 14:52:51 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/06/01 12:05:29 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,24 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	_HP = HP;
 	_EP = EP;
 	_attack = AP;
+}
+
+FragTrap::FragTrap(FragTrap &copy) : ClapTrap(copy)
+{
+	std::cout << "FragTrap Copy constructor called" << std::endl;
+}
+
+FragTrap &FragTrap::operator=(FragTrap const &copy)
+{
+	std::cout << "FragTrap Copy assignment operator called" << std::endl;
+	if (this != &copy)
+	{
+		this->_attack = copy._attack;
+		this->_HP = copy._HP;
+		this->_EP = copy._EP;
+		this->_name = copy._name;
+	}
+	return (*this);
 }
 
 FragTrap::~FragTrap()
