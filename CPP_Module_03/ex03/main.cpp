@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 16:02:33 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/31 14:58:11 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/06/01 08:37:01 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ int main(void)
 	diamond.whoAmI();
 	std::cout << "HP " << diamond.getHP() << std::endl;
 	std::cout << "EP " << diamond.getEP() << std::endl;
-	std::cout << "Attack " << diamond.getAttack() << std::endl;	
+	std::cout << "Attack " << diamond.getAttack() << std::endl;
 	return (0);
 }

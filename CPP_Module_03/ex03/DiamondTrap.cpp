@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 12:07:35 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/31 14:57:17 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/06/01 08:36:53 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 DiamondTrap::DiamondTrap(void) : ScavTrap("Default"), FragTrap("Default"), _name("Default")
 {
 	std::string suffix = "_clap_name";
-	
+
 	std::cout << "ClapTrap " << _name << " evolved to DiamondTrap!" << std::endl;
 	ClapTrap::_name = "Default" + suffix;
 	_HP = FragTrap::HP;
@@ -45,16 +45,16 @@ void DiamondTrap::whoAmI(void)
 	std::cout << "ClapTrap name: " << ClapTrap::_name << std::endl;
 }
 
-int	DiamondTrap::getHP(void)
+int DiamondTrap::getHP(void)
 {
 	return (this->_HP);
 }
-int	DiamondTrap::getAttack(void)
+int DiamondTrap::getAttack(void)
 {
 	return (ScavTrap::_attack);
 }
 
-int	DiamondTrap::getEP(void)
+int DiamondTrap::getEP(void)
 {
 	return (this->_EP);
 }
