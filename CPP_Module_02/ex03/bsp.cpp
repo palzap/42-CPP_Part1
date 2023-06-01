@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 09:21:05 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/31 10:17:55 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/06/01 08:18:36 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,15 @@ bool bsp(Point const a, Point const b, Point const c, Point const point)
 	Fixed PBC = triangle_area(b, c, point);
 
 	Fixed u = PAB / ABC;
-  	Fixed v = PAC / ABC;
+	Fixed v = PAC / ABC;
 	Fixed w = PBC / ABC;
 	if (u > 0 && u < 1 && v > 0 && v < 1 && w > 0 && w < 1)
-    	return (true);
+		return (true);
 	else if (u == 0 || u == 1 || v == 0 || v == 1 || w == 0 || w == 1)
 	{
-    	std::cout << "Point is on the edge or a vertex" << std::endl;
-    	return (false);
-	} 
-	else 
-    	return (false);
+		std::cout << "Point is on the edge or a vertex" << std::endl;
+		return (false);
+	}
+	else
+		return (false);
 }

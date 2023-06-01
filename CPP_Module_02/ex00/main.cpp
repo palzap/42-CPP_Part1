@@ -6,18 +6,18 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 10:05:06 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/29 12:04:04 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/06/01 08:19:20 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-int main( void )
+int main(void)
 {
 	Fixed a;
 	Fixed b(a);
 	Fixed c;
-	
+
 	c = b;
 	std::cout << a.getRawBits() << std::endl;
 	std::cout << b.getRawBits() << std::endl;
