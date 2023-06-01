@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:19:13 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/23 14:21:37 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/06/01 12:30:33 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ std::string	Contact::read_input(std::string prompt)
 	{
 		std::cout << prompt << std::endl;
 		if (!getline(std::cin, info))
-			exit(0);
+			std::exit(0);
 		if (info.length() == 0)
 			continue ;
 		else

@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 15:09:46 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/31 15:14:09 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/06/01 10:05:31 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 Animal::Animal() : type("")
 {
-	std::cout << "Animal constructor called" << std::endl;
+	std::cout << "A new Animal appears!" << std::endl;
 }
 
 Animal::Animal(std::string name) : type(name)
 {
-	std::cout << "Animal(name) constructor called" << std::endl;
+	std::cout << "A new Animal "<< name << " appears!" << std::endl;
 }
 
 Animal::Animal(Animal &copy) : type(copy.type)
@@ -40,4 +40,14 @@ Animal &Animal::operator=(Animal const &copy)
 Animal::~Animal()
 {
 	std::cout << "Destructor called" << std::endl;
+}
+
+void Animal::makesound()
+{
+	std::cout << "Animal goes brrrrr" << std::endl;
+}
+
+std::string	getType(void)
+{
+	return ();
 }

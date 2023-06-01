@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/31 16:28:22 by pealexan          #+#    #+#             */
-/*   Updated: 2023/06/01 09:54:29 by pealexan         ###   ########.fr       */
+/*   Created: 2023/06/01 09:50:58 by pealexan          #+#    #+#             */
+/*   Updated: 2023/06/01 09:53:41 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "Animal.hpp"
 
-Cat::Cat()
+class Dog : public Animal 
 {
-	std::cout << "A new Cat appears!" << std::endl;
-	Animal::type = "Cat";
-}
-
-Cat::~Cat()
-{
-	std::cout << "Cat fled!" << std::endl;
-}
-
-void Animal::makesound()
-{
-	std::cout << "meow meow" << std::endl;
-}
+	public:
+		Dog();
+		Dog(std::string name);
+		~Dog();
+		virtual void makesound();
+};

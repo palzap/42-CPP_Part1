@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 08:33:17 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/26 16:03:43 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/06/01 12:31:41 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <iostream>
 #include <string>
 #include <limits>
+#include <unistd.h>
 
 class Zombie
 {

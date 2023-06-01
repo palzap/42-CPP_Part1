@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 16:25:56 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/31 16:27:43 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/06/01 09:53:29 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,6 @@ class Cat : public Animal
 	public:
 		Cat();
 		Cat(std::string name);
-		Cat(Cat &copy);
-		Cat &operator=(Cat const &copy);
 		~Cat();
-	
-	protected:
-		std::string type;
+		virtual void makesound();
 };

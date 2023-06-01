@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/31 16:28:22 by pealexan          #+#    #+#             */
-/*   Updated: 2023/06/01 09:54:29 by pealexan         ###   ########.fr       */
+/*   Created: 2023/06/01 09:51:01 by pealexan          #+#    #+#             */
+/*   Updated: 2023/06/01 09:54:22 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "Dog.hpp"
 
-Cat::Cat()
+Dog::Dog()
 {
-	std::cout << "A new Cat appears!" << std::endl;
-	Animal::type = "Cat";
+	std::cout << "A new Dog appears!" << std::endl;
+	Animal::type = "Dog";
 }
 
-Cat::~Cat()
+Dog::~Dog()
 {
-	std::cout << "Cat fled!" << std::endl;
+	std::cout << "Dog fled!" << std::endl;
 }
 
 void Animal::makesound()
 {
-	std::cout << "meow meow" << std::endl;
+	std::cout << "woof woof" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 14:13:00 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/27 18:22:48 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/06/01 12:44:50 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,21 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
+#include <unistd.h>
 
 void error_handling(int ac, char **av)
 {
 	if (ac != 4)
 	{
 		std::cout << "Wrong number of arguments" << std::endl;
-		exit(1);
+		_exit(1);
 	}
 
 	std::string findStr = av[2];
 	if (findStr.empty())
 	{
 		std::cout << "Find string can't be empty" << std::endl;
-		exit(1);
+		_exit(1);
 	}
 }
 

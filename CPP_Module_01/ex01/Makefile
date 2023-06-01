@@ -6,7 +6,7 @@
 #    By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/02 12:26:28 by pealexan          #+#    #+#              #
-#    Updated: 2023/05/24 09:40:38 by pealexan         ###   ########.fr        #
+#    Updated: 2023/06/01 12:28:45 by pealexan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,7 @@ $(NAME): $(OBJ_DIR) $(TARGET)
 
 $(OBJ_DIR)/%.o : %.cpp
 	echo "[$(CYAN)Compiling$(RESET)] $(YELLOW)$(CPPFLAGS)$(YELLOW) $(GREEN)$<$(RESET)"
-	$(CC) $(CFLAGS) -c $< -o $@ -I $(DEPS)
+	$(CC) $(CPPFLAGS) -c $< -o $@ -I $(DEPS)
 
 $(OBJ_DIR):
 	mkdir -p $(OBJ_DIR)

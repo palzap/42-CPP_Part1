@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:30:06 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/22 09:11:31 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/06/01 12:25:08 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,28 +24,19 @@ bool	is_number(std::string str)
 
 void	search_index(PhoneBook phonebook)
 {
-	std::string	input;
-	int	i;
+	size_t	i;
 	
 	while (1)
 	{
 		std::cout << "* Input the index to see full details *" << std::endl;
-		getline(std::cin, input);
-		if (input.length() == 0)
+		std::cin >> i;
+		if (i < 0 || i >= phonebook.get_size())
 			continue ;
-		if (is_number(input))
-		{
-			i = std::stoi(input);
-			if (i < 0 || i >= phonebook.get_size())
-				continue ;
-			else
-			{
-				phonebook.contacts[i].print_info();
-				break ;
-			}
-		}
 		else
-			continue ;
+		{
+			phonebook.contacts[i].print_info();
+			break ;
+		}
 	}
 }
 
@@ -53,7 +44,6 @@ int	main(void)
 {
 	std::string	input;
 	PhoneBook	phonebook;
-	int			i = 0;
 	
 	std::cout << "***************************************" << std::endl;
 	std::cout << "*           Input a command           *" << std::endl;

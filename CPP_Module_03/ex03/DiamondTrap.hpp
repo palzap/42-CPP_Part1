@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 11:59:40 by pealexan          #+#    #+#             */
-/*   Updated: 2023/06/01 12:06:51 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/06/01 12:10:21 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,6 @@ public:
 	DiamondTrap &operator=(DiamondTrap const &copy);
 	~DiamondTrap();
 	void whoAmI(void);
-	using FragTrap::_attack;
-	using FragTrap::_HP;
-	using ScavTrap::_EP;
-	using ScavTrap::attack;
 	int getHP(void);
 	int getAttack(void);
 	int getEP(void);
