@@ -6,7 +6,7 @@
 #    By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/02 12:26:28 by pealexan          #+#    #+#              #
-#    Updated: 2023/05/31 16:33:30 by pealexan         ###   ########.fr        #
+#    Updated: 2023/06/01 14:28:14 by pealexan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ OBJ_DIR		= bin
 
 #_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_ FILES _/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_
 NAME			= Polymorphism
-_FILES			= main Animal Cat
+_FILES			= main Animal Cat Dog WrongAnimal WrongCat
 OBJS			= $(_FILES:%=%.o)
 TARGET			= $(addprefix $(OBJ_DIR)/, $(OBJS))
 
@@ -51,7 +51,7 @@ $(NAME): $(OBJ_DIR) $(TARGET)
 
 $(OBJ_DIR)/%.o : %.cpp
 	echo "[$(CYAN)Compiling$(RESET)] $(YELLOW)$(CPPFLAGS)$(YELLOW) $(GREEN)$<$(RESET)"
-	$(CC) $(CFLAGS) -c $< -o $@ -I $(DEPS)
+	$(CC) $(CPPFLAGS) -c $< -o $@ -I $(DEPS)
 
 $(OBJ_DIR):
 	mkdir -p $(OBJ_DIR)

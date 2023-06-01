@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 09:51:01 by pealexan          #+#    #+#             */
-/*   Updated: 2023/06/01 09:54:22 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/06/01 14:08:54 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Dog::Dog()
 {
-	std::cout << "A new Dog appears!" << std::endl;
+	std::cout << "It's a Dog!" << std::endl;
 	Animal::type = "Dog";
 }
 
@@ -23,7 +23,7 @@ Dog::~Dog()
 	std::cout << "Dog fled!" << std::endl;
 }
 
-void Animal::makesound()
+void Dog::makeSound() const
 {
 	std::cout << "woof woof" << std::endl;
 }
