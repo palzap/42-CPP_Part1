@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 14:53:43 by pealexan          #+#    #+#             */
-/*   Updated: 2023/06/01 14:56:59 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/09/05 16:51:58 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ Brain::Brain()
 Brain::Brain(Brain const &copy)
 {
 	std::cout << "Brain Copy constructor called" << std::endl;
-	*this = copy;
+	for (int i = 0; i < 100; i++)
+		this->_ideas[i] = copy._ideas[i];
 }
 
 Brain &Brain::operator=(Brain const &copy)
