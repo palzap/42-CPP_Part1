@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 15:09:46 by pealexan          #+#    #+#             */
-/*   Updated: 2023/06/01 14:06:55 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/09/05 16:06:38 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ Animal::~Animal()
 
 void Animal::makeSound() const
 {
-	std::cout << "Animal goes brrrrr" << std::endl;
+	std::cout << "** the sound of silence **" << std::endl;
 }
 
 std::string	Animal::getType() const

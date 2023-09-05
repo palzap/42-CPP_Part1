@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 09:51:01 by pealexan          #+#    #+#             */
-/*   Updated: 2023/09/05 15:39:11 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/09/05 15:52:05 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,9 @@ Dog::Dog(std::string name) : Animal(name)
 	Animal::type = "Dog";
 }
 
-Dog::Dog(Dog &copy)
+Dog::Dog(Dog &copy) : Animal(copy)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	*this = copy;
 }
 
 Dog &Dog::operator=(Dog const &copy)

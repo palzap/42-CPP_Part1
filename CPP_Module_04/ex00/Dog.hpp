@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 09:50:58 by pealexan          #+#    #+#             */
-/*   Updated: 2023/09/05 15:38:31 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/09/05 16:04:02 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class Dog : public Animal
 		Dog(std::string name);
 		Dog(Dog &copy);
 		Dog &operator=(Dog const &copy);
-		virtual ~Dog();
-		virtual void makeSound() const;
+		~Dog();
+		void makeSound() const;
 };
 
 #endif

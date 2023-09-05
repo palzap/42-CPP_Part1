@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 16:28:22 by pealexan          #+#    #+#             */
-/*   Updated: 2023/09/05 15:37:43 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/09/05 15:51:23 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,9 @@ Cat::Cat(std::string name) : Animal(name)
 	Animal::type = "Cat";
 }
 
-Cat::Cat(Cat &copy)
+Cat::Cat(Cat &copy) : Animal(copy)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	*this = copy;
 }
 
 Cat &Cat::operator=(Cat const &copy)
