@@ -6,36 +6,41 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 15:05:34 by pealexan          #+#    #+#             */
-/*   Updated: 2023/06/01 14:36:32 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/09/13 15:35:37 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
+#include "Brain.hpp"
+
+void copy_constructors(void)
+{
+	Cat *cat = new Cat();
+	Cat *clone = new Cat(*cat);
+
+	cat->printBrain();
+	delete cat;
+
+	clone->printBrain();
+	delete clone;
+
+	std::cout << std::endl;
+}
 
 int main(void)
 {
-	const Animal *meta = new Animal();
-	const Animal *j = new Dog();
-	const Animal *i = new Cat();
+	Animal *animal[10];
 
-	const WrongAnimal *wrong = new WrongAnimal();
-	const WrongAnimal *wrongC = new WrongCat();
+	for (int i = 0; i < 5; i++)
+		animal[i] = new Dog();
+	for (int i = 5; i < 10; i++)
+		animal[i] = new Cat();
+	copy_constructors();
 	
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound();
-	j->makeSound();
-	meta->makeSound();
-	wrong->makeSound();
-	wrongC->makeSound();
-	delete meta;
-	delete j;
-	delete i;
-	delete wrong;
-	delete wrongC;
+	for (int i = 0; i < 10; i++)
+		delete animal[i];
+
 	return (0);
 }

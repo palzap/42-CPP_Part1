@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 15:09:46 by pealexan          #+#    #+#             */
-/*   Updated: 2023/09/05 16:06:38 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/09/13 15:34:58 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Animal::Animal(std::string name) : type(name)
 
 Animal::Animal(Animal &copy) : type(copy.type)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "A Copy constructor called" << std::endl;
 }
 
 Animal &Animal::operator=(Animal const &copy)

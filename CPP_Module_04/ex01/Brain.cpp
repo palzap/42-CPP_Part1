@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 14:53:43 by pealexan          #+#    #+#             */
-/*   Updated: 2023/09/05 16:51:58 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/09/13 15:30:09 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 Brain::Brain()
 {
 	std::cout << "Brain created!" << std::endl;
+	for (int i = 0; i < 100; i++)
+		this->_ideas[i] = "Idea";
 }
 
 Brain::Brain(Brain const &copy)

@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 16:25:56 by pealexan          #+#    #+#             */
-/*   Updated: 2023/09/05 16:56:25 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/09/13 15:24:40 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class Cat : public Animal
 		Cat &operator=(Cat const &copy);
 		~Cat();
 		void makeSound() const;
+		void printBrain() const;
 	
 	private:
 		Brain *_brain;

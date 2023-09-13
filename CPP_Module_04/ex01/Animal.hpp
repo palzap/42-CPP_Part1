@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 15:06:13 by pealexan          #+#    #+#             */
-/*   Updated: 2023/06/01 14:07:57 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/09/13 14:42:06 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define ANIMAL_HPP
 
 #include <iostream>
+#include "Brain.hpp"
 
 class Animal
 {

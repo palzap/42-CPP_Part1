@@ -38,7 +38,7 @@ OBJ_DIR		= bin
 
 #_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_ FILES _/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_/=\_
 NAME			= Set_the_world_on_fire
-_FILES			= main Animal Cat Dog
+_FILES			= main Animal Cat Dog Brain
 OBJS			= $(_FILES:%=%.o)
 TARGET			= $(addprefix $(OBJ_DIR)/, $(OBJS))
 
