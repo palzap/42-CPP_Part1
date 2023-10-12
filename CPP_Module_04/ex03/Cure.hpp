@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   book.hpp                                           :+:      :+:    :+:   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/22 09:10:00 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/22 09:17:54 by pealexan         ###   ########.fr       */
+/*   Created: 2023/10/11 11:23:55 by pealexan          #+#    #+#             */
+/*   Updated: 2023/10/11 11:25:16 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BOOK_HPP
-# define BOOK_HPP
+#ifndef CURE_HPP
+#define CURE_HPP
 
-# include <iostream>
-# include <iomanip>
-# include <string>
-# include <stdlib.h>
-# include "Contact.hpp"
-# include "PhoneBook.hpp"
+#include "AMateria.hpp"
 
-void	search_index(PhoneBook phonebook);
-bool	is_number(std::string str);
+class Cure : public AMateria
+{
+public:
+	Cure(void);
+	Cure(Cure const &copy);
+	Cure &operator=(Cure const &copy);
+	~Cure(void);
+	AMateria *clone(void) const;
+	void use(ICharacter &target);
+};
 
 #endif

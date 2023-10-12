@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 15:09:46 by pealexan          #+#    #+#             */
-/*   Updated: 2023/09/13 15:34:58 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/10/11 10:29:34 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Animal::Animal() : type("")
 
 Animal::Animal(std::string name) : type(name)
 {
-	std::cout << "A new Animal "<< name << " appears!" << std::endl;
+	std::cout << "A new Animal " << name << " appears!" << std::endl;
 }
 
 Animal::Animal(Animal &copy) : type(copy.type)
@@ -47,7 +47,7 @@ void Animal::makeSound() const
 	std::cout << "** the sound of silence **" << std::endl;
 }
 
-std::string	Animal::getType() const
+std::string Animal::getType() const
 {
 	return (this->type);
 }

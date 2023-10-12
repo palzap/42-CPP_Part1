@@ -29,7 +29,7 @@ std::string	Contact::read_input(std::string prompt)
 	{
 		std::cout << prompt << std::endl;
 		if (!getline(std::cin, info))
-			std::exit(0);
+			exit(0);
 		if (info.length() == 0)
 			continue ;
 		else

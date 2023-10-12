@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   book.hpp                                           :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/22 09:10:00 by pealexan          #+#    #+#             */
-/*   Updated: 2023/05/22 09:17:54 by pealexan         ###   ########.fr       */
+/*   Created: 2023/10/11 11:40:01 by pealexan          #+#    #+#             */
+/*   Updated: 2023/10/11 11:40:19 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BOOK_HPP
-# define BOOK_HPP
+#ifndef ICE_HPP
+#define ICE_HPP
 
-# include <iostream>
-# include <iomanip>
-# include <string>
-# include <stdlib.h>
-# include "Contact.hpp"
-# include "PhoneBook.hpp"
+#include "AMateria.hpp"
 
-void	search_index(PhoneBook phonebook);
-bool	is_number(std::string str);
+class Ice : public AMateria
+{
+public:
+	Ice(void);
+	Ice(Ice const &copy);
+	Ice &operator=(Ice const &copy);
+	~Ice(void);
+	AMateria *clone(void) const;
+	void use(ICharacter &target);
+};
 
 #endif
