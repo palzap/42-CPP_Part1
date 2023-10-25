@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 16:28:22 by pealexan          #+#    #+#             */
-/*   Updated: 2023/09/13 15:34:26 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/10/25 09:37:48 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,8 @@ void Cat::makeSound() const
 	std::cout << "meow meow" << std::endl;
 }
 
-void Cat::printBrain() const
+void Cat::printAddress() const
 {
-	std::cout << this->_brain << std::endl;
-	//	this->_ideas[i] = "Idea";
+	std::cout << "Brain address -> " << this->_brain << std::endl;
+	std::cout << "Animal address -> " << this << std::endl;
 }

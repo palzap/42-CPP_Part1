@@ -6,7 +6,7 @@
 /*   By: pealexan <pealexan@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 15:05:34 by pealexan          #+#    #+#             */
-/*   Updated: 2023/09/13 15:35:37 by pealexan         ###   ########.fr       */
+/*   Updated: 2023/10/25 09:36:07 by pealexan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ void copy_constructors(void)
 	Cat *cat = new Cat();
 	Cat *clone = new Cat(*cat);
 
-	cat->printBrain();
+	cat->printAddress();
 	delete cat;
 
-	clone->printBrain();
+	clone->printAddress();
 	delete clone;
 
 	std::cout << std::endl;
